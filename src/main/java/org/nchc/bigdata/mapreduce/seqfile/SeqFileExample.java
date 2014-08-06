@@ -6,6 +6,7 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.NullOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
 /**
@@ -20,9 +21,10 @@ public class SeqFileExample {
         job.setJarByClass(SeqFileExample.class);
         job.setMapperClass(SqeFileMapper.class);
         job.setInputFormatClass(SequenceFileInputFormat.class);
+        job.setOutputFormatClass(NullOutputFormat.class);
         job.setNumReduceTasks(0);
         FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+        //FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }

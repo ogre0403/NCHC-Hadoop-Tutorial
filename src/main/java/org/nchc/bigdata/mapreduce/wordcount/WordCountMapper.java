@@ -21,7 +21,6 @@ public  class WordCountMapper extends Mapper<Object, Text, Text, IntWritable>{
       while (itr.hasMoreTokens()) {
         word.set(itr.nextToken());
         context.write(word, one);
-       
       }
     }
   }

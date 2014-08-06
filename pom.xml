@@ -49,7 +49,11 @@
 			<artifactId>hadoop-mapreduce-client-jobclient</artifactId>
 			<version>2.0.0-cdh4.7.0</version>
 		</dependency>
-
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>2.0.0-cdh4.7.0</version>
+        </dependency>
 		<dependency>
 			<groupId>org.apache.mrunit</groupId>
 			<artifactId>mrunit</artifactId>
