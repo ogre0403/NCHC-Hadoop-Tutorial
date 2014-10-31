@@ -36,12 +36,19 @@ public class WordCountTest {
 		   String line = "Taobao Taobao is a great website";
 		   mapdriver
 		   	.withInput(new Text(""),new Text(line))
+            .withInput(new Text(""),new Text(line))
 	     	.withOutput(new Text("Taobao"),new IntWritable(1))
 	     	.withOutput(new Text("Taobao"),new IntWritable(1))
 	     	.withOutput(new Text("is"), new IntWritable(1))
 	     	.withOutput(new Text("a"), new IntWritable(1))
 	     	.withOutput(new Text("great"), new IntWritable(1))
 	     	.withOutput(new Text("website"), new IntWritable(1))
+                   .withOutput(new Text("Taobao"),new IntWritable(1))
+                   .withOutput(new Text("Taobao"),new IntWritable(1))
+                   .withOutput(new Text("is"), new IntWritable(1))
+                   .withOutput(new Text("a"), new IntWritable(1))
+                   .withOutput(new Text("great"), new IntWritable(1))
+                   .withOutput(new Text("website"), new IntWritable(1))
 	     	.runTest();
 		}
 	   
