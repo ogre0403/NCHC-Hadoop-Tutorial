@@ -1,4 +1,4 @@
-package org.nchc.train.mr;
+package org.nchc.train.mr.seq;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;

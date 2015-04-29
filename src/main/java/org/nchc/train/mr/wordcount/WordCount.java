@@ -1,4 +1,4 @@
-package org.nchc.train.mr;
+package org.nchc.train.mr.wordcount;
 
 
 import org.apache.hadoop.conf.Configuration;
