@@ -13,8 +13,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.6</jdk.version>
-        <hbase.version>0.94.15-cdh4.7.0</hbase.version>
-        <hadoop.version>2.0.0-cdh4.7.0</hadoop.version>
+        <hbase.version>0.98.6-cdh5.3.2</hbase.version>
+        <hadoop.version>2.5.0-cdh5.3.2</hadoop.version>
 	</properties>
 
 	<repositories>
@@ -54,7 +54,7 @@
 		</dependency>
         <dependency>
             <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase</artifactId>
+            <artifactId>hbase-client</artifactId>
             <version>${hbase.version}</version>
         </dependency>
 
@@ -63,7 +63,7 @@
             <artifactId>hadoop-hdfs</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
-
+<!--
 		<dependency>
 			<groupId>org.apache.mrunit</groupId>
 			<artifactId>mrunit</artifactId>
@@ -76,7 +76,7 @@
             <artifactId>opencsv</artifactId>
             <version>2.3</version>
         </dependency>
-
+-->
     </dependencies>
 
     <build>
