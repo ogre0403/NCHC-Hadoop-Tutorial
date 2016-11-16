@@ -15,6 +15,7 @@
         <jdk.version>1.6</jdk.version>
         <hbase.version>0.98.6-cdh5.3.2</hbase.version>
         <hadoop.version>2.5.0-cdh5.3.2</hadoop.version>
+        <mahout.version>0.9-cdh5.3.2</mahout.version>
 	</properties>
 
 	<repositories>
@@ -25,13 +26,6 @@
 	</repositories>
 
 	<dependencies>
-		<dependency>
-			<groupId>jdk.tools</groupId>
-			<artifactId>jdk.tools</artifactId>
-			<version>1.6</version>
-			<scope>system</scope>
-			<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
 			<artifactId>hadoop-mapreduce-client-core</artifactId>
@@ -63,20 +57,12 @@
             <artifactId>hadoop-hdfs</artifactId>
             <version>${hadoop.version}</version>
         </dependency>
-<!--
-		<dependency>
-			<groupId>org.apache.mrunit</groupId>
-			<artifactId>mrunit</artifactId>
-			<version>1.0.0</version>
-			<classifier>hadoop2</classifier>
-			<scope>test</scope>
-		</dependency>
+
         <dependency>
-            <groupId>net.sf.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>2.3</version>
+            <groupId>org.apache.mahout</groupId>
+            <artifactId>mahout-core</artifactId>
+            <version>${mahout.version}</version>
         </dependency>
--->
     </dependencies>
 
     <build>

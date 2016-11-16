@@ -16,7 +16,7 @@ import java.io.*;
 public class AccessHDFS {
     private static FileSystem fs;
     private static Configuration conf;
-    private static String hdfsURI = "hdfs://192.168.56.10:9000";
+    private static String hdfsURI = "hdfs://master:9000";
 
     public static void main(String[] args) throws IOException {
         conf = new Configuration();
@@ -24,7 +24,7 @@ public class AccessHDFS {
         fs = FileSystem.get(conf);
 
         writeToHDFS("A.jpg", "/a.JPG");
-        readFromHDFS("/AAA.JPG","/D:/aaa.jpg");
+        readFromHDFS("/a.JPG","/home/hadoop/aaa.jpg");
         String[] names = {"A.jpg","B.jpg","C.jpg","D.jpg"};
         createSeqFile(names, "/seq.file");
     }

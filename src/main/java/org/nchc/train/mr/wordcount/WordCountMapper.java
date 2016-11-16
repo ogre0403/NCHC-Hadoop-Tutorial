@@ -1,6 +1,7 @@
 package org.nchc.train.mr.wordcount;
 
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.log4j.Logger;
@@ -9,12 +10,12 @@ import java.io.IOException;
 import java.util.StringTokenizer;
 
 
-public  class WordCountMapper extends Mapper<Object, Text, Text, IntWritable>{
+public  class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
     private final static IntWritable one = new IntWritable(1);
     private Text word = new Text();
     private static Logger logger = Logger.getLogger(WordCountMapper.class);
     @Override
-    public void map(Object key, Text value, Context context
+    public void map(LongWritable key, Text value, Context context
                     ) throws IOException, InterruptedException {
 
       logger.info("input sentence " + value.toString());
